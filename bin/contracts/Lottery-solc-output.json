@@ -1,0 +1,2127 @@
+{
+    "contracts": {
+        "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol": {
+            "Lottery": {
+                "abi": [
+                    {
+                        "inputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "constructor"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "index",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "getBetInfo",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "answerBlockNumber",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "bettor",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "bytes1",
+                                "name": "challenges",
+                                "type": "bytes1"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "getPot",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_pot",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "getSomeValue",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "value",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "pure",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "owner",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "index",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "popBet",
+                        "outputs": [
+                            {
+                                "internalType": "bool",
+                                "name": "",
+                                "type": "bool"
+                            }
+                        ],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "bytes1",
+                                "name": "challenges",
+                                "type": "bytes1"
+                            }
+                        ],
+                        "name": "pushBet",
+                        "outputs": [
+                            {
+                                "internalType": "bool",
+                                "name": "",
+                                "type": "bool"
+                            }
+                        ],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    }
+                ],
+                "devdoc": {
+                    "kind": "dev",
+                    "methods": {},
+                    "version": 1
+                },
+                "evm": {
+                    "bytecode": {
+                        "linkReferences": {},
+                        "object": "608060405234801561001057600080fd5b50600380546001600160a01b031916331790556102d8806100326000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630328209614610067578063403c9fa8146100a257806379141f80146100bc5780638da5cb5b14610109578063a40674b71461012d578063d04c9a8c14610135575b600080fd5b61008e6004803603602081101561007d57600080fd5b50356001600160f81b031916610152565b604080519115158252519081900360200190f35b6100aa6101dd565b60408051918252519081900360200190f35b6100d9600480360360208110156100d257600080fd5b50356101e2565b604080519384526001600160a01b0390921660208401526001600160f81b03191682820152519081900360600190f35b610111610247565b604080516001600160a01b039092168252519081900360200190f35b6100aa610256565b61008e6004803603602081101561014b57600080fd5b503561025b565b600061015c610282565b3360208083019182524360030183526001600160f81b0319851660408085019182526000805481526002909352822093518455915160019384018054935160f81c600160a01b0260ff60a01b196001600160a01b03939093166001600160a01b03199095169490941791909116929092179091558054820190559050919050565b600090565b60008060006101ef610282565b50505060009182525060026020908152604091829020825160608101845281548082526001909201546001600160a01b038116938201849052600160a01b900460f81b6001600160f81b031916930183905292909190565b6003546001600160a01b031681565b600590565b6000908152600260205260408120908155600190810180546001600160a81b031916905590565b60408051606081018252600080825260208201819052918101919091529056fea2646970667358221220e199379d8868bc56a8dab9e208a3ac192663767d5e9710e5003bc64f592a790664736f6c63430007000033",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND CALLER OR SWAP1 SSTORE PUSH2 0x2D8 DUP1 PUSH2 0x32 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x62 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x3282096 EQ PUSH2 0x67 JUMPI DUP1 PUSH4 0x403C9FA8 EQ PUSH2 0xA2 JUMPI DUP1 PUSH4 0x79141F80 EQ PUSH2 0xBC JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0x109 JUMPI DUP1 PUSH4 0xA40674B7 EQ PUSH2 0x12D JUMPI DUP1 PUSH4 0xD04C9A8C EQ PUSH2 0x135 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x8E PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x7D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND PUSH2 0x152 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xAA PUSH2 0x1DD JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xD9 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0xD2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x1E2 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP4 DUP5 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND PUSH1 0x20 DUP5 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND DUP3 DUP3 ADD MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x60 ADD SWAP1 RETURN JUMPDEST PUSH2 0x111 PUSH2 0x247 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xAA PUSH2 0x256 JUMP JUMPDEST PUSH2 0x8E PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x14B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x25B JUMP JUMPDEST PUSH1 0x0 PUSH2 0x15C PUSH2 0x282 JUMP JUMPDEST CALLER PUSH1 0x20 DUP1 DUP4 ADD SWAP2 DUP3 MSTORE NUMBER PUSH1 0x3 ADD DUP4 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT DUP6 AND PUSH1 0x40 DUP1 DUP6 ADD SWAP2 DUP3 MSTORE PUSH1 0x0 DUP1 SLOAD DUP2 MSTORE PUSH1 0x2 SWAP1 SWAP4 MSTORE DUP3 KECCAK256 SWAP4 MLOAD DUP5 SSTORE SWAP2 MLOAD PUSH1 0x1 SWAP4 DUP5 ADD DUP1 SLOAD SWAP4 MLOAD PUSH1 0xF8 SHR PUSH1 0x1 PUSH1 0xA0 SHL MUL PUSH1 0xFF PUSH1 0xA0 SHL NOT PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP4 SWAP1 SWAP4 AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT SWAP1 SWAP6 AND SWAP5 SWAP1 SWAP5 OR SWAP2 SWAP1 SWAP2 AND SWAP3 SWAP1 SWAP3 OR SWAP1 SWAP2 SSTORE DUP1 SLOAD DUP3 ADD SWAP1 SSTORE SWAP1 POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH2 0x1EF PUSH2 0x282 JUMP JUMPDEST POP POP POP PUSH1 0x0 SWAP2 DUP3 MSTORE POP PUSH1 0x2 PUSH1 0x20 SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP2 DUP3 SWAP1 KECCAK256 DUP3 MLOAD PUSH1 0x60 DUP2 ADD DUP5 MSTORE DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 SWAP1 SWAP3 ADD SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND SWAP4 DUP3 ADD DUP5 SWAP1 MSTORE PUSH1 0x1 PUSH1 0xA0 SHL SWAP1 DIV PUSH1 0xF8 SHL PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND SWAP4 ADD DUP4 SWAP1 MSTORE SWAP3 SWAP1 SWAP2 SWAP1 JUMP JUMPDEST PUSH1 0x3 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x5 SWAP1 JUMP JUMPDEST PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x2 PUSH1 0x20 MSTORE PUSH1 0x40 DUP2 KECCAK256 SWAP1 DUP2 SSTORE PUSH1 0x1 SWAP1 DUP2 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA8 SHL SUB NOT AND SWAP1 SSTORE SWAP1 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x60 DUP2 ADD DUP3 MSTORE PUSH1 0x0 DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 SWAP1 MSTORE SWAP2 DUP2 ADD SWAP2 SWAP1 SWAP2 MSTORE SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE1 SWAP10 CALLDATACOPY SWAP14 DUP9 PUSH9 0xBC56A8DAB9E208A3AC NOT 0x26 PUSH4 0x767D5E97 LT 0xE5 STOP EXTCODESIZE 0xC6 0x4F MSIZE 0x2A PUSH26 0x664736F6C634300070000330000000000000000000000000000 ",
+                        "sourceMap": "35:1378:0:-:0;;;488:56;;;;;;;;;-1:-1:-1;519:5:0;:18;;-1:-1:-1;;;;;;519:18:0;527:10;519:18;;;35:1378;;;;;;"
+                    },
+                    "deployedBytecode": {
+                        "immutableReferences": {},
+                        "linkReferences": {},
+                        "object": "608060405234801561001057600080fd5b50600436106100625760003560e01c80630328209614610067578063403c9fa8146100a257806379141f80146100bc5780638da5cb5b14610109578063a40674b71461012d578063d04c9a8c14610135575b600080fd5b61008e6004803603602081101561007d57600080fd5b50356001600160f81b031916610152565b604080519115158252519081900360200190f35b6100aa6101dd565b60408051918252519081900360200190f35b6100d9600480360360208110156100d257600080fd5b50356101e2565b604080519384526001600160a01b0390921660208401526001600160f81b03191682820152519081900360600190f35b610111610247565b604080516001600160a01b039092168252519081900360200190f35b6100aa610256565b61008e6004803603602081101561014b57600080fd5b503561025b565b600061015c610282565b3360208083019182524360030183526001600160f81b0319851660408085019182526000805481526002909352822093518455915160019384018054935160f81c600160a01b0260ff60a01b196001600160a01b03939093166001600160a01b03199095169490941791909116929092179091558054820190559050919050565b600090565b60008060006101ef610282565b50505060009182525060026020908152604091829020825160608101845281548082526001909201546001600160a01b038116938201849052600160a01b900460f81b6001600160f81b031916930183905292909190565b6003546001600160a01b031681565b600590565b6000908152600260205260408120908155600190810180546001600160a81b031916905590565b60408051606081018252600080825260208201819052918101919091529056fea2646970667358221220e199379d8868bc56a8dab9e208a3ac192663767d5e9710e5003bc64f592a790664736f6c63430007000033",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x62 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x3282096 EQ PUSH2 0x67 JUMPI DUP1 PUSH4 0x403C9FA8 EQ PUSH2 0xA2 JUMPI DUP1 PUSH4 0x79141F80 EQ PUSH2 0xBC JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0x109 JUMPI DUP1 PUSH4 0xA40674B7 EQ PUSH2 0x12D JUMPI DUP1 PUSH4 0xD04C9A8C EQ PUSH2 0x135 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x8E PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x7D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND PUSH2 0x152 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xAA PUSH2 0x1DD JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xD9 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0xD2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x1E2 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP4 DUP5 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND PUSH1 0x20 DUP5 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND DUP3 DUP3 ADD MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x60 ADD SWAP1 RETURN JUMPDEST PUSH2 0x111 PUSH2 0x247 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xAA PUSH2 0x256 JUMP JUMPDEST PUSH2 0x8E PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x14B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x25B JUMP JUMPDEST PUSH1 0x0 PUSH2 0x15C PUSH2 0x282 JUMP JUMPDEST CALLER PUSH1 0x20 DUP1 DUP4 ADD SWAP2 DUP3 MSTORE NUMBER PUSH1 0x3 ADD DUP4 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT DUP6 AND PUSH1 0x40 DUP1 DUP6 ADD SWAP2 DUP3 MSTORE PUSH1 0x0 DUP1 SLOAD DUP2 MSTORE PUSH1 0x2 SWAP1 SWAP4 MSTORE DUP3 KECCAK256 SWAP4 MLOAD DUP5 SSTORE SWAP2 MLOAD PUSH1 0x1 SWAP4 DUP5 ADD DUP1 SLOAD SWAP4 MLOAD PUSH1 0xF8 SHR PUSH1 0x1 PUSH1 0xA0 SHL MUL PUSH1 0xFF PUSH1 0xA0 SHL NOT PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP4 SWAP1 SWAP4 AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT SWAP1 SWAP6 AND SWAP5 SWAP1 SWAP5 OR SWAP2 SWAP1 SWAP2 AND SWAP3 SWAP1 SWAP3 OR SWAP1 SWAP2 SSTORE DUP1 SLOAD DUP3 ADD SWAP1 SSTORE SWAP1 POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH2 0x1EF PUSH2 0x282 JUMP JUMPDEST POP POP POP PUSH1 0x0 SWAP2 DUP3 MSTORE POP PUSH1 0x2 PUSH1 0x20 SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP2 DUP3 SWAP1 KECCAK256 DUP3 MLOAD PUSH1 0x60 DUP2 ADD DUP5 MSTORE DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 SWAP1 SWAP3 ADD SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND SWAP4 DUP3 ADD DUP5 SWAP1 MSTORE PUSH1 0x1 PUSH1 0xA0 SHL SWAP1 DIV PUSH1 0xF8 SHL PUSH1 0x1 PUSH1 0x1 PUSH1 0xF8 SHL SUB NOT AND SWAP4 ADD DUP4 SWAP1 MSTORE SWAP3 SWAP1 SWAP2 SWAP1 JUMP JUMPDEST PUSH1 0x3 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x5 SWAP1 JUMP JUMPDEST PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x2 PUSH1 0x20 MSTORE PUSH1 0x40 DUP2 KECCAK256 SWAP1 DUP2 SSTORE PUSH1 0x1 SWAP1 DUP2 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA8 SHL SUB NOT AND SWAP1 SSTORE SWAP1 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x60 DUP2 ADD DUP3 MSTORE PUSH1 0x0 DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 SWAP1 MSTORE SWAP2 DUP2 ADD SWAP2 SWAP1 SWAP2 MSTORE SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE1 SWAP10 CALLDATACOPY SWAP14 DUP9 PUSH9 0xBC56A8DAB9E208A3AC NOT 0x26 PUSH4 0x767D5E97 LT 0xE5 STOP EXTCODESIZE 0xC6 0x4F MSIZE 0x2A PUSH26 0x664736F6C634300070000330000000000000000000000000000 ",
+                        "sourceMap": "35:1378:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1009:286;;;;;;;;;;;;;;;;-1:-1:-1;1009:286:0;-1:-1:-1;;;;;;1009:286:0;;:::i;:::-;;;;;;;;;;;;;;;;;;641:81;;;:::i;:::-;;;;;;;;;;;;;;;;728:275;;;;;;;;;;;;;;;;-1:-1:-1;728:275:0;;:::i;:::-;;;;;;;-1:-1:-1;;;;;728:275:0;;;;;;;-1:-1:-1;;;;;;728:275:0;;;;;;;;;;;;;;273:20;;;:::i;:::-;;;;-1:-1:-1;;;;;273:20:0;;;;;;;;;;;;;;550:85;;;:::i;1301:109::-;;;;;;;;;;;;;;;;-1:-1:-1;1301:109:0;;:::i;1009:286::-;1059:4;1075:16;;:::i;:::-;1112:10;1101:8;;;;:21;;;1154:12;396:1;1154:33;1132:55;;-1:-1:-1;;;;;;1197:25:0;;:12;;;;:25;;;1132:19;1239:5;;1233:12;;:5;:12;;;;;:16;;;;;;;;;;;;;;;;-1:-1:-1;;;1233:16:0;-1:-1:-1;;;;;;;;;1233:16:0;;;;-1:-1:-1;;;;;;1233:16:0;;;;;;;;;;;;;;;;;;1259:7;;;;;;1233:16;-1:-1:-1;1009:286:0;;;:::o;641:81::-;680:12;641:81;:::o;728:275::-;784:25;811:14;827:15;854:16;;:::i;:::-;-1:-1:-1;;;873:12:0;;;;-1:-1:-1;873:5:0;:12;;;;;;;;;854:31;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;854:31:0;;;;;;;;-1:-1:-1;;;854:31:0;;;;-1:-1:-1;;;;;;854:31:0;;;;;;;;;;728:275::o;273:20::-;;;-1:-1:-1;;;;;273:20:0;;:::o;550:85::-;627:1;550:85;:::o;1301:109::-;1347:4;1370:12;;;:5;:12;;;;;1363:19;;;;;;;;;-1:-1:-1;;;;;;1363:19:0;;;;1301:109::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o"
+                    },
+                    "gasEstimates": {
+                        "creation": {
+                            "codeDepositCost": "145600",
+                            "executionCost": "21025",
+                            "totalCost": "166625"
+                        },
+                        "external": {
+                            "getBetInfo(uint256)": "2304",
+                            "getPot()": "198",
+                            "getSomeValue()": "264",
+                            "owner()": "1081",
+                            "popBet(uint256)": "26245",
+                            "pushBet(bytes1)": "63093"
+                        }
+                    },
+                    "methodIdentifiers": {
+                        "getBetInfo(uint256)": "79141f80",
+                        "getPot()": "403c9fa8",
+                        "getSomeValue()": "a40674b7",
+                        "owner()": "8da5cb5b",
+                        "popBet(uint256)": "d04c9a8c",
+                        "pushBet(bytes1)": "03282096"
+                    }
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getBetInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"answerBlockNumber\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"bettor\",\"type\":\"address\"},{\"internalType\":\"bytes1\",\"name\":\"challenges\",\"type\":\"bytes1\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_pot\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSomeValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"popBet\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes1\",\"name\":\"challenges\",\"type\":\"bytes1\"}],\"name\":\"pushBet\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/4tossy/Documents/\\uacf5\\ubd80/lottery-smart-contract/contracts/Lottery.sol\":\"Lottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/4tossy/Documents/\\uacf5\\ubd80/lottery-smart-contract/contracts/Lottery.sol\":{\"keccak256\":\"0x5c30c4e6d839511041d5323e583ed032aa7e6a1ffafee37c263ae42fda5f3421\",\"urls\":[\"bzz-raw://438623b55c485f406149fc5dea1bea37ccd2edaf7c388cd7ed645ef16a211607\",\"dweb:/ipfs/QmV7qVxNyLF9dtoSyfVbBTVgz2iBoPK1NXz2rwLXBw1jxD\"]}},\"version\":1}",
+                "userdoc": {
+                    "kind": "user",
+                    "methods": {},
+                    "version": 1
+                }
+            }
+        }
+    },
+    "errors": [
+        {
+            "component": "general",
+            "errorCode": "1878",
+            "formattedMessage": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n",
+            "message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+            "severity": "warning",
+            "sourceLocation": {
+                "end": -1,
+                "file": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                "start": -1
+            },
+            "type": "Warning"
+        },
+        {
+            "component": "general",
+            "errorCode": "2519",
+            "formattedMessage": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol:30:44: Warning: This declaration shadows an existing declaration.\n    function getPot() public view returns (uint256 _pot) {\n                                           ^----------^\n/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol:20:5: The shadowed declaration is here:\n    uint256 private _pot;\n    ^------------------^\n",
+            "message": "This declaration shadows an existing declaration.",
+            "secondarySourceLocations": [
+                {
+                    "end": 481,
+                    "file": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                    "message": "The shadowed declaration is here:",
+                    "start": 461
+                }
+            ],
+            "severity": "warning",
+            "sourceLocation": {
+                "end": 692,
+                "file": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                "start": 680
+            },
+            "type": "Warning"
+        },
+        {
+            "component": "general",
+            "errorCode": "2462",
+            "formattedMessage": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol:22:5: Warning: Visibility for constructor is ignored. If you want the contract to be non-deployable, making it \"abstract\" is sufficient.\n    constructor() public {\n    ^ (Relevant source part starts here and spans across multiple lines).\n",
+            "message": "Visibility for constructor is ignored. If you want the contract to be non-deployable, making it \"abstract\" is sufficient.",
+            "severity": "warning",
+            "sourceLocation": {
+                "end": 544,
+                "file": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                "start": 488
+            },
+            "type": "Warning"
+        },
+        {
+            "component": "general",
+            "errorCode": "2018",
+            "formattedMessage": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol:30:5: Warning: Function state mutability can be restricted to pure\n    function getPot() public view returns (uint256 _pot) {\n    ^ (Relevant source part starts here and spans across multiple lines).\n",
+            "message": "Function state mutability can be restricted to pure",
+            "severity": "warning",
+            "sourceLocation": {
+                "end": 722,
+                "file": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                "start": 641
+            },
+            "type": "Warning"
+        }
+    ],
+    "sources": {
+        "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol": {
+            "ast": {
+                "absolutePath": "/Users/4tossy/Documents/공부/lottery-smart-contract/contracts/Lottery.sol",
+                "exportedSymbols": {
+                    "Lottery": [
+                        151
+                    ]
+                },
+                "id": 152,
+                "license": null,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.4",
+                            ".22",
+                            "<",
+                            "0.8",
+                            ".0"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:32:0"
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "contract",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 151,
+                        "linearizedBaseContracts": [
+                            151
+                        ],
+                        "name": "Lottery",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "canonicalName": "Lottery.BetInfo",
+                                "id": 8,
+                                "members": [
+                                    {
+                                        "constant": false,
+                                        "id": 3,
+                                        "mutability": "mutable",
+                                        "name": "answerBlockNumber",
+                                        "nodeType": "VariableDeclaration",
+                                        "overrides": null,
+                                        "scope": 8,
+                                        "src": "83:25:0",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "typeName": {
+                                            "id": 2,
+                                            "name": "uint256",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "83:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    },
+                                    {
+                                        "constant": false,
+                                        "id": 5,
+                                        "mutability": "mutable",
+                                        "name": "bettor",
+                                        "nodeType": "VariableDeclaration",
+                                        "overrides": null,
+                                        "scope": 8,
+                                        "src": "118:14:0",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        },
+                                        "typeName": {
+                                            "id": 4,
+                                            "name": "address",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "118:7:0",
+                                            "stateMutability": "nonpayable",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    },
+                                    {
+                                        "constant": false,
+                                        "id": 7,
+                                        "mutability": "mutable",
+                                        "name": "challenges",
+                                        "nodeType": "VariableDeclaration",
+                                        "overrides": null,
+                                        "scope": 8,
+                                        "src": "142:15:0",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes1",
+                                            "typeString": "bytes1"
+                                        },
+                                        "typeName": {
+                                            "id": 6,
+                                            "name": "byte",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "142:4:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bytes1",
+                                                "typeString": "bytes1"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    }
+                                ],
+                                "name": "BetInfo",
+                                "nodeType": "StructDefinition",
+                                "scope": 151,
+                                "src": "58:106:0",
+                                "visibility": "public"
+                            },
+                            {
+                                "constant": false,
+                                "id": 10,
+                                "mutability": "mutable",
+                                "name": "_tail",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "169:21:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 9,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "169:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "private"
+                            },
+                            {
+                                "constant": false,
+                                "id": 12,
+                                "mutability": "mutable",
+                                "name": "_head",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "196:21:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 11,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "196:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "private"
+                            },
+                            {
+                                "constant": false,
+                                "id": 16,
+                                "mutability": "mutable",
+                                "name": "_bets",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "223:43:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_BetInfo_$8_storage_$",
+                                    "typeString": "mapping(uint256 => struct Lottery.BetInfo)"
+                                },
+                                "typeName": {
+                                    "id": 15,
+                                    "keyType": {
+                                        "id": 13,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "232:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "Mapping",
+                                    "src": "223:29:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_BetInfo_$8_storage_$",
+                                        "typeString": "mapping(uint256 => struct Lottery.BetInfo)"
+                                    },
+                                    "valueType": {
+                                        "contractScope": null,
+                                        "id": 14,
+                                        "name": "BetInfo",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 8,
+                                        "src": "244:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_BetInfo_$8_storage_ptr",
+                                            "typeString": "struct Lottery.BetInfo"
+                                        }
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "private"
+                            },
+                            {
+                                "constant": false,
+                                "functionSelector": "8da5cb5b",
+                                "id": 18,
+                                "mutability": "mutable",
+                                "name": "owner",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "273:20:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                },
+                                "typeName": {
+                                    "id": 17,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "273:7:0",
+                                    "stateMutability": "nonpayable",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "public"
+                            },
+                            {
+                                "constant": true,
+                                "id": 21,
+                                "mutability": "constant",
+                                "name": "BLOCK_LIMIT",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "300:43:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 19,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "300:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": {
+                                    "argumentTypes": null,
+                                    "hexValue": "323536",
+                                    "id": 20,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "340:3:0",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_256_by_1",
+                                        "typeString": "int_const 256"
+                                    },
+                                    "value": "256"
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": true,
+                                "id": 24,
+                                "mutability": "constant",
+                                "name": "BET_BLOCK_INTERVAL",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "349:48:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 22,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "349:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": {
+                                    "argumentTypes": null,
+                                    "hexValue": "33",
+                                    "id": 23,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "396:1:0",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_3_by_1",
+                                        "typeString": "int_const 3"
+                                    },
+                                    "value": "3"
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": true,
+                                "id": 31,
+                                "mutability": "constant",
+                                "name": "BET_AMOUNT",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "403:51:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 25,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "403:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": {
+                                    "argumentTypes": null,
+                                    "commonType": {
+                                        "typeIdentifier": "t_rational_5000000000000000_by_1",
+                                        "typeString": "int_const 5000000000000000"
+                                    },
+                                    "id": 30,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "lValueRequested": false,
+                                    "leftExpression": {
+                                        "argumentTypes": null,
+                                        "hexValue": "35",
+                                        "id": 26,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "number",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "442:1:0",
+                                        "subdenomination": null,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_rational_5_by_1",
+                                            "typeString": "int_const 5"
+                                        },
+                                        "value": "5"
+                                    },
+                                    "nodeType": "BinaryOperation",
+                                    "operator": "*",
+                                    "rightExpression": {
+                                        "argumentTypes": null,
+                                        "commonType": {
+                                            "typeIdentifier": "t_rational_1000000000000000_by_1",
+                                            "typeString": "int_const 1000000000000000"
+                                        },
+                                        "id": 29,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "argumentTypes": null,
+                                            "hexValue": "3130",
+                                            "id": 27,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "446:2:0",
+                                            "subdenomination": null,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_10_by_1",
+                                                "typeString": "int_const 10"
+                                            },
+                                            "value": "10"
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "**",
+                                        "rightExpression": {
+                                            "argumentTypes": null,
+                                            "hexValue": "3135",
+                                            "id": 28,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "452:2:0",
+                                            "subdenomination": null,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_15_by_1",
+                                                "typeString": "int_const 15"
+                                            },
+                                            "value": "15"
+                                        },
+                                        "src": "446:8:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_rational_1000000000000000_by_1",
+                                            "typeString": "int_const 1000000000000000"
+                                        }
+                                    },
+                                    "src": "442:12:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_5000000000000000_by_1",
+                                        "typeString": "int_const 5000000000000000"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 33,
+                                "mutability": "mutable",
+                                "name": "_pot",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 151,
+                                "src": "461:20:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 32,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "461:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "private"
+                            },
+                            {
+                                "body": {
+                                    "id": 41,
+                                    "nodeType": "Block",
+                                    "src": "509:35:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 39,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 36,
+                                                    "name": "owner",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 18,
+                                                    "src": "519:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 37,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": -15,
+                                                        "src": "527:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 38,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": null,
+                                                    "src": "527:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address_payable",
+                                                        "typeString": "address payable"
+                                                    }
+                                                },
+                                                "src": "519:18:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "id": 40,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "519:18:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "id": 42,
+                                "implemented": true,
+                                "kind": "constructor",
+                                "modifiers": [],
+                                "name": "",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 34,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "499:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 35,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "509:0:0"
+                                },
+                                "scope": 151,
+                                "src": "488:56:0",
+                                "stateMutability": "nonpayable",
+                                "virtual": false,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 49,
+                                    "nodeType": "Block",
+                                    "src": "610:25:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "hexValue": "35",
+                                                "id": 47,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "627:1:0",
+                                                "subdenomination": null,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_5_by_1",
+                                                    "typeString": "int_const 5"
+                                                },
+                                                "value": "5"
+                                            },
+                                            "functionReturnParameters": 46,
+                                            "id": 48,
+                                            "nodeType": "Return",
+                                            "src": "620:8:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "functionSelector": "a40674b7",
+                                "id": 50,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "getSomeValue",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 43,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "571:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 46,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 45,
+                                            "mutability": "mutable",
+                                            "name": "value",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 50,
+                                            "src": "595:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 44,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "595:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "594:15:0"
+                                },
+                                "scope": 151,
+                                "src": "550:85:0",
+                                "stateMutability": "pure",
+                                "virtual": false,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 57,
+                                    "nodeType": "Block",
+                                    "src": "694:28:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 55,
+                                                "name": "_pot",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 53,
+                                                "src": "711:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "functionReturnParameters": 54,
+                                            "id": 56,
+                                            "nodeType": "Return",
+                                            "src": "704:11:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "functionSelector": "403c9fa8",
+                                "id": 58,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "getPot",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 51,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "656:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 54,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 53,
+                                            "mutability": "mutable",
+                                            "name": "_pot",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 58,
+                                            "src": "680:12:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 52,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "680:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "679:14:0"
+                                },
+                                "scope": 151,
+                                "src": "641:81:0",
+                                "stateMutability": "view",
+                                "virtual": false,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 90,
+                                    "nodeType": "Block",
+                                    "src": "844:159:0",
+                                    "statements": [
+                                        {
+                                            "assignments": [
+                                                70
+                                            ],
+                                            "declarations": [
+                                                {
+                                                    "constant": false,
+                                                    "id": 70,
+                                                    "mutability": "mutable",
+                                                    "name": "b",
+                                                    "nodeType": "VariableDeclaration",
+                                                    "overrides": null,
+                                                    "scope": 90,
+                                                    "src": "854:16:0",
+                                                    "stateVariable": false,
+                                                    "storageLocation": "memory",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                        "typeString": "struct Lottery.BetInfo"
+                                                    },
+                                                    "typeName": {
+                                                        "contractScope": null,
+                                                        "id": 69,
+                                                        "name": "BetInfo",
+                                                        "nodeType": "UserDefinedTypeName",
+                                                        "referencedDeclaration": 8,
+                                                        "src": "854:7:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_storage_ptr",
+                                                            "typeString": "struct Lottery.BetInfo"
+                                                        }
+                                                    },
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                }
+                                            ],
+                                            "id": 74,
+                                            "initialValue": {
+                                                "argumentTypes": null,
+                                                "baseExpression": {
+                                                    "argumentTypes": null,
+                                                    "id": 71,
+                                                    "name": "_bets",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 16,
+                                                    "src": "873:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_BetInfo_$8_storage_$",
+                                                        "typeString": "mapping(uint256 => struct Lottery.BetInfo storage ref)"
+                                                    }
+                                                },
+                                                "id": 73,
+                                                "indexExpression": {
+                                                    "argumentTypes": null,
+                                                    "id": 72,
+                                                    "name": "index",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 60,
+                                                    "src": "879:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "873:12:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BetInfo_$8_storage",
+                                                    "typeString": "struct Lottery.BetInfo storage ref"
+                                                }
+                                            },
+                                            "nodeType": "VariableDeclarationStatement",
+                                            "src": "854:31:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 78,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 75,
+                                                    "name": "answerBlockNumber",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 63,
+                                                    "src": "895:17:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 76,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 70,
+                                                        "src": "915:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 77,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "answerBlockNumber",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 3,
+                                                    "src": "915:19:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "895:39:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "id": 79,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "895:39:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 83,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 80,
+                                                    "name": "bettor",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 65,
+                                                    "src": "944:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 81,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 70,
+                                                        "src": "953:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 82,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "bettor",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 5,
+                                                    "src": "953:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "src": "944:17:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "id": 84,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "944:17:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 88,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 85,
+                                                    "name": "challenges",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 67,
+                                                    "src": "971:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bytes1",
+                                                        "typeString": "bytes1"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 86,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 70,
+                                                        "src": "984:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 87,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "challenges",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 7,
+                                                    "src": "984:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bytes1",
+                                                        "typeString": "bytes1"
+                                                    }
+                                                },
+                                                "src": "971:25:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes1",
+                                                    "typeString": "bytes1"
+                                                }
+                                            },
+                                            "id": 89,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "971:25:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "functionSelector": "79141f80",
+                                "id": 91,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "getBetInfo",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 61,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 60,
+                                            "mutability": "mutable",
+                                            "name": "index",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 91,
+                                            "src": "748:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 59,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "748:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "747:15:0"
+                                },
+                                "returnParameters": {
+                                    "id": 68,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 63,
+                                            "mutability": "mutable",
+                                            "name": "answerBlockNumber",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 91,
+                                            "src": "784:25:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 62,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "784:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 65,
+                                            "mutability": "mutable",
+                                            "name": "bettor",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 91,
+                                            "src": "811:14:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 64,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "811:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 67,
+                                            "mutability": "mutable",
+                                            "name": "challenges",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 91,
+                                            "src": "827:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bytes1",
+                                                "typeString": "bytes1"
+                                            },
+                                            "typeName": {
+                                                "id": 66,
+                                                "name": "byte",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "827:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes1",
+                                                    "typeString": "bytes1"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "783:60:0"
+                                },
+                                "scope": 151,
+                                "src": "728:275:0",
+                                "stateMutability": "view",
+                                "virtual": false,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 134,
+                                    "nodeType": "Block",
+                                    "src": "1065:230:0",
+                                    "statements": [
+                                        {
+                                            "assignments": [
+                                                99
+                                            ],
+                                            "declarations": [
+                                                {
+                                                    "constant": false,
+                                                    "id": 99,
+                                                    "mutability": "mutable",
+                                                    "name": "b",
+                                                    "nodeType": "VariableDeclaration",
+                                                    "overrides": null,
+                                                    "scope": 134,
+                                                    "src": "1075:16:0",
+                                                    "stateVariable": false,
+                                                    "storageLocation": "memory",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                        "typeString": "struct Lottery.BetInfo"
+                                                    },
+                                                    "typeName": {
+                                                        "contractScope": null,
+                                                        "id": 98,
+                                                        "name": "BetInfo",
+                                                        "nodeType": "UserDefinedTypeName",
+                                                        "referencedDeclaration": 8,
+                                                        "src": "1075:7:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_storage_ptr",
+                                                            "typeString": "struct Lottery.BetInfo"
+                                                        }
+                                                    },
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                }
+                                            ],
+                                            "id": 100,
+                                            "initialValue": null,
+                                            "nodeType": "VariableDeclarationStatement",
+                                            "src": "1075:16:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 106,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 101,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 99,
+                                                        "src": "1101:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 103,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": true,
+                                                    "memberName": "bettor",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 5,
+                                                    "src": "1101:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 104,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": -15,
+                                                        "src": "1112:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 105,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": null,
+                                                    "src": "1112:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address_payable",
+                                                        "typeString": "address payable"
+                                                    }
+                                                },
+                                                "src": "1101:21:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "id": 107,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1101:21:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 115,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 108,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 99,
+                                                        "src": "1132:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 110,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": true,
+                                                    "memberName": "answerBlockNumber",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 3,
+                                                    "src": "1132:19:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "commonType": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    },
+                                                    "id": 114,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "leftExpression": {
+                                                        "argumentTypes": null,
+                                                        "expression": {
+                                                            "argumentTypes": null,
+                                                            "id": 111,
+                                                            "name": "block",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": -4,
+                                                            "src": "1154:5:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_magic_block",
+                                                                "typeString": "block"
+                                                            }
+                                                        },
+                                                        "id": 112,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "memberName": "number",
+                                                        "nodeType": "MemberAccess",
+                                                        "referencedDeclaration": null,
+                                                        "src": "1154:12:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "nodeType": "BinaryOperation",
+                                                    "operator": "+",
+                                                    "rightExpression": {
+                                                        "argumentTypes": null,
+                                                        "id": 113,
+                                                        "name": "BET_BLOCK_INTERVAL",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 24,
+                                                        "src": "1169:18:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "src": "1154:33:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "1132:55:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "id": 116,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1132:55:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 121,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "expression": {
+                                                        "argumentTypes": null,
+                                                        "id": 117,
+                                                        "name": "b",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 99,
+                                                        "src": "1197:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                            "typeString": "struct Lottery.BetInfo memory"
+                                                        }
+                                                    },
+                                                    "id": 119,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": true,
+                                                    "memberName": "challenges",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 7,
+                                                    "src": "1197:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bytes1",
+                                                        "typeString": "bytes1"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 120,
+                                                    "name": "challenges",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 93,
+                                                    "src": "1212:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bytes1",
+                                                        "typeString": "bytes1"
+                                                    }
+                                                },
+                                                "src": "1197:25:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes1",
+                                                    "typeString": "bytes1"
+                                                }
+                                            },
+                                            "id": 122,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1197:25:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 127,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "baseExpression": {
+                                                        "argumentTypes": null,
+                                                        "id": 123,
+                                                        "name": "_bets",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 16,
+                                                        "src": "1233:5:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_BetInfo_$8_storage_$",
+                                                            "typeString": "mapping(uint256 => struct Lottery.BetInfo storage ref)"
+                                                        }
+                                                    },
+                                                    "id": 125,
+                                                    "indexExpression": {
+                                                        "argumentTypes": null,
+                                                        "id": 124,
+                                                        "name": "_tail",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 10,
+                                                        "src": "1239:5:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": true,
+                                                    "nodeType": "IndexAccess",
+                                                    "src": "1233:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BetInfo_$8_storage",
+                                                        "typeString": "struct Lottery.BetInfo storage ref"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 126,
+                                                    "name": "b",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 99,
+                                                    "src": "1248:1:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BetInfo_$8_memory_ptr",
+                                                        "typeString": "struct Lottery.BetInfo memory"
+                                                    }
+                                                },
+                                                "src": "1233:16:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BetInfo_$8_storage",
+                                                    "typeString": "struct Lottery.BetInfo storage ref"
+                                                }
+                                            },
+                                            "id": 128,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1233:16:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 130,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "UnaryOperation",
+                                                "operator": "++",
+                                                "prefix": false,
+                                                "src": "1259:7:0",
+                                                "subExpression": {
+                                                    "argumentTypes": null,
+                                                    "id": 129,
+                                                    "name": "_tail",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 10,
+                                                    "src": "1259:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "id": 131,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1259:7:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "hexValue": "74727565",
+                                                "id": 132,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "bool",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "1284:4:0",
+                                                "subdenomination": null,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                "value": "true"
+                                            },
+                                            "functionReturnParameters": 97,
+                                            "id": 133,
+                                            "nodeType": "Return",
+                                            "src": "1277:11:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "functionSelector": "03282096",
+                                "id": 135,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "pushBet",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 94,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 93,
+                                            "mutability": "mutable",
+                                            "name": "challenges",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 135,
+                                            "src": "1026:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bytes1",
+                                                "typeString": "bytes1"
+                                            },
+                                            "typeName": {
+                                                "id": 92,
+                                                "name": "byte",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1026:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes1",
+                                                    "typeString": "bytes1"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "1025:17:0"
+                                },
+                                "returnParameters": {
+                                    "id": 97,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 96,
+                                            "mutability": "mutable",
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 135,
+                                            "src": "1059:4:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 95,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1059:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "1058:6:0"
+                                },
+                                "scope": 151,
+                                "src": "1009:286:0",
+                                "stateMutability": "nonpayable",
+                                "virtual": false,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 149,
+                                    "nodeType": "Block",
+                                    "src": "1353:57:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 145,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "UnaryOperation",
+                                                "operator": "delete",
+                                                "prefix": true,
+                                                "src": "1363:19:0",
+                                                "subExpression": {
+                                                    "argumentTypes": null,
+                                                    "baseExpression": {
+                                                        "argumentTypes": null,
+                                                        "id": 142,
+                                                        "name": "_bets",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 16,
+                                                        "src": "1370:5:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_BetInfo_$8_storage_$",
+                                                            "typeString": "mapping(uint256 => struct Lottery.BetInfo storage ref)"
+                                                        }
+                                                    },
+                                                    "id": 144,
+                                                    "indexExpression": {
+                                                        "argumentTypes": null,
+                                                        "id": 143,
+                                                        "name": "index",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 137,
+                                                        "src": "1376:5:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": true,
+                                                    "nodeType": "IndexAccess",
+                                                    "src": "1370:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BetInfo_$8_storage",
+                                                        "typeString": "struct Lottery.BetInfo storage ref"
+                                                    }
+                                                },
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_tuple$__$",
+                                                    "typeString": "tuple()"
+                                                }
+                                            },
+                                            "id": 146,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "1363:19:0"
+                                        },
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "hexValue": "74727565",
+                                                "id": 147,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "bool",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "1399:4:0",
+                                                "subdenomination": null,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                "value": "true"
+                                            },
+                                            "functionReturnParameters": 141,
+                                            "id": 148,
+                                            "nodeType": "Return",
+                                            "src": "1392:11:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "functionSelector": "d04c9a8c",
+                                "id": 150,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "popBet",
+                                "nodeType": "FunctionDefinition",
+                                "overrides": null,
+                                "parameters": {
+                                    "id": 138,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 137,
+                                            "mutability": "mutable",
+                                            "name": "index",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 150,
+                                            "src": "1317:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 136,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1317:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "1316:15:0"
+                                },
+                                "returnParameters": {
+                                    "id": 141,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 140,
+                                            "mutability": "mutable",
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 150,
+                                            "src": "1347:4:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 139,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1347:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "1346:6:0"
+                                },
+                                "scope": 151,
+                                "src": "1301:109:0",
+                                "stateMutability": "nonpayable",
+                                "virtual": false,
+                                "visibility": "public"
+                            }
+                        ],
+                        "scope": 152,
+                        "src": "35:1378:0"
+                    }
+                ],
+                "src": "0:1417:0"
+            },
+            "id": 0
+        }
+    }
+}
